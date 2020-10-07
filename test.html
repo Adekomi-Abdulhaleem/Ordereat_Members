@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+/* .tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current tablink class */
+/* .tab button.active {
+  background-color: #ccc;
+} */
+
+/* Style the tab content */
+/* .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} */
+.parts {height: fit-content;
+        width: 100%;
+        background-color: aqua;
+        padding: 50px;
+}
+.parts .part {display: none;
+}
+</style>
+</head>
+<body>
+
+<p>In this example, we use JavaScript to "click" on the London button, to open the tab on page load.</p>
+
+<button>part one</button>
+<button>part two</button>
+<button>part three</button>
+
+<div class="parts">
+    <div class="part part-one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis praesentium aut quos, debitis doloribus ducimus neque harum, beatae quas dignissimos totam officia dolorum voluptatum maiores facere voluptates laudantium asperiores ipsum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deleniti tempore vero excepturi doloribus temporibus maiores dolores magni, aperiam velit, esse deserunt ab qui vitae eum hic? Numquam, explicabo. Hic?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quos quasi temporibus dolore aperiam? Unde distinctio dignissimos, excepturi beatae saepe sequi impedit dicta, accusamus facilis ratione error tenetur, cupiditate accusantium.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam odit distinctio ab molestiae optio facilis, illo, sunt quas accusantium nostrum aperiam eum ea rerum id exercitationem non doloremque dicta cupiditate.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, veniam repellat ipsum voluptates ullam, repellendus distinctio libero delectus laborum labore, molestias expedita ipsa. Nulla architecto incidunt recusandae commodi aliquam doloribus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti id quaerat harum incidunt. Quibusdam voluptate delectus, veritatis autem quas ipsum debitis fugiat dolor iusto mollitia deserunt eveniet cupiditate minima voluptatum.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat perspiciatis tempore maiores illo, impedit quisquam repellat quae aliquid error atque corrupti porro mollitia expedita provident excepturi alias esse quo facere.
+    </div> <br>
+    <div class="part part-two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis praesentium aut quos, debitis doloribus ducimus neque harum, beatae quas dignissimos totam officia dolorum voluptatum maiores facere voluptates laudantium asperiores ipsum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deleniti tempore vero excepturi doloribus temporibus maiores dolores magni, aperiam velit, esse deserunt ab qui vitae eum hic? Numquam, explicabo. Hic?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quos quasi temporibus dolore aperiam? Unde distinctio dignissimos, excepturi beatae saepe sequi impedit dicta, accusamus facilis ratione error tenetur, cupiditate accusantium.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam odit distinctio ab molestiae optio facilis, illo, sunt quas accusantium nostrum aperiam eum ea rerum id exercitationem non doloremque dicta cupiditate.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, veniam repellat ipsum voluptates ullam, repellendus distinctio libero delectus laborum labore, molestias expedita ipsa. Nulla architecto incidunt recusandae commodi aliquam doloribus!
+        </div><br>
+    <div class="part part-three">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis praesentium aut quos, debitis doloribus ducimus neque harum, beatae quas dignissimos totam officia dolorum voluptatum maiores facere voluptates laudantium asperiores ipsum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deleniti tempore vero excepturi doloribus temporibus maiores dolores magni, aperiam velit, esse deserunt ab qui vitae eum hic? Numquam, explicabo. Hic?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quos quasi temporibus dolore aperiam? Unde distinctio dignissimos, excepturi beatae saepe sequi impedit dicta, accusamus facilis ratione error tenetur, cupiditate accusantium.
+        </div>
+</div>
+
+
+<!-- <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div> -->
+
+<script>
+    var buttons = document.querySelectorAll('button')
+    var eachPart = document.getElementsByClassName('part')
+    
+    buttons.forEach(function (item, index) {
+        item.addEventListener('click', (event) => {
+            var number = index
+            console.log(number)
+            for (i = 0; i < eachPart.length; i++) {
+                var textNotShow = eachPart[i]
+                var textToShow = eachPart[number]
+            textNotShow.style.display = "none"
+            }
+            console.log(textToShow)
+            textToShow.style.display = "block"
+    })
+    })
+    
+// function openCity(evt, cityName) {
+//   var i, tabcontent, tablinks;
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+//   tablinks = document.getElementsByClassName("tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+//   document.getElementById(cityName).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
+
+// // Get the element with id="defaultOpen" and click on it
+// document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

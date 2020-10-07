@@ -1,0 +1,163 @@
+body {margin: 0;
+      padding: 0;
+}
+header {background-color: #F5C956;
+        height: 100px;
+        width: 100%;
+}
+nav h1 {text-align: center;
+         color: white;
+         font-size: 55px;
+}
+.section-one {background-image: url(../Ordereat_Members/campaign-creators-gMsnXqILjp4-unsplash\ \(2\).jpg);
+              height: 70vh;
+              background-repeat: no-repeat;
+              /* background-attachment: fixed; */
+              background-position: center;
+              background-size: cover;
+              width: 100%;
+}
+.section-two {background-color: #F5C956;
+}
+.section-two h1 {text-align: center;
+                 color: white;
+                 padding-top: 20px;
+}
+.section-two .main {display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;   
+}
+
+/* 
+This styling is used for both section two and four, so they 
+don't have same styling part pattern because they have the 
+type of sections - to reduce stress and long codes 
+*/
+
+/* style for image containers (.image-part), not to repeat in section four again */
+.image-part {width: 30%;
+}
+/* ends */
+
+/* style for all memebers image, not to repeat in section four again */
+.members-image {height: 300px;
+                width: 75%;
+}
+/* ends */
+
+/* style for all h1's inside .image-part, not to repeat in section four again */
+.image-part h1 {font-size: 24px;
+                color: black;
+                text-align: center;
+}
+/* ends */
+
+/* style for all h3's inside .image-part, not to repeat in section four again */
+.image-part h3 {font-weight: 100;
+                       color: black;
+                       font-style: italic;
+                       font-size: 20px;
+                       text-align: center;
+}
+/* ends */
+
+.section-three img {width: 100%;
+                    height: 25vh;
+                    z-index: -1;
+}
+.section-four {margin-top: -13vh;
+               height: 100vh;
+               width: 100%;
+               background-color: white;
+               z-index: 1;
+               position: relative;
+}
+.section-four .part-one h1 {padding: 30px;
+                            color: #F5C956;
+}
+.section-four .button-container {background-color: rgba(245, 201, 86, 0.5);
+                                 display: flex;
+                                 justify-content: space-between;
+}
+.section-four .button-container button {height: 60px;
+                                        border: none;
+                                        outline: none;
+                                        background-color: unset;
+                                        box-sizing: border-box;
+}
+.section-four .button-container button:hover,
+.section-four .button-container button.active {transition: .2s linear;
+                                              background-color: #F5C956;
+                                              color: white;
+                                              border-bottom: 4px solid white;
+                                              font-size: 18px;
+}
+.section-four .part-two .department {display: flex;
+                                     flex-wrap: wrap;
+                                     justify-content: center;
+}
+.section-four .part-two .departments .department,
+.section-four .part-two .departments .department.not-active {display: none;  
+                                                             transform: translateX(0%);
+}
+.section-four .part-two .departments .department.active {display: flex;
+                                                         animation: animateShow 1s linear;
+}
+@keyframes animateShow {
+      0% {
+            opacity: 0;
+      }
+      100% {
+            opacity: 1;
+      }
+}
+
+
+@media(max-width: 779px) {
+      nav h1 {font-size: 36px;
+              line-height: 70px;
+      }
+      .section-one {height: 60vh;
+      }
+      .section-two h1 {font-size: 28px;
+      }
+      .members-image {height: 200px;
+      }
+      .image-part h1 {font-size: 20px;
+      }
+      .image-part h3 {font-size: 17px;
+      }
+      .section-four .button-container button {font-size: 14px;
+      }
+      .section-four .button-container button:hover,
+      .section-four .button-container button.active {font-size: 16px;
+      }
+}
+
+
+@media(max-width: 529px) {
+      nav h1 {font-size: 36px;
+              line-height: 70px;
+      }
+      header {height: 70px;
+      }
+      .section-one {height: 50vh;
+      }
+      .section-two h1 {padding-top: 10px;
+      }
+      .image-part {width: 50%;
+                   margin: 0;
+      }
+      .members-image {height: 150px;
+      }
+      .image-part h1 {font-size: 12px;
+      }
+      .image-part h3 {font-size: 11px;
+      }
+      .section-four .button-container button {font-size: 8px;
+                                              height: 40px;
+      }
+      .section-four .button-container button:hover,
+      .section-four .button-container button.active {font-size: 9px;
+      }
+}
